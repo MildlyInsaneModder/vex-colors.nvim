@@ -51,6 +51,23 @@ function M.setup()
 		color14 = "#FFFFFF",
 		color15 = "#FFFFFF",
 	}
+	vim.g.terminal_color_0 = "#000000"
+	vim.g.terminal_color_1 = "#7A1E1E"
+	vim.g.terminal_color_2 = "#a83d3d"
+	vim.g.terminal_color_3 = "#D14747"
+	vim.g.terminal_color_4 = "#DE7E7E"
+	vim.g.terminal_color_5 = "#E9A9A9"
+	vim.g.terminal_color_6 = "#F4D6F4"
+	vim.g.terminal_color_7 = "#FFFFFF"
+	vim.g.terminal_color_8 = "#202020"
+	vim.g.terminal_color_9 = "#909090"
+	vim.g.terminal_color_10 = "#505050"
+	vim.g.terminal_color_11 = "#989898"
+	vim.g.terminal_color_12 = "#BEBEBE"
+	vim.g.terminal_color_13 = "#DADADA"
+	vim.g.terminal_color_14 = "#FFFFFF"
+	vim.g.terminal_color_15 = "#FFFFFF"
+
 	for i = 0, 15 do
 		local color_key = "color" .. i
 		local color_val = M.terminal_colors[color_key]
