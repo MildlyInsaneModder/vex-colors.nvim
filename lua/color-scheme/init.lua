@@ -32,25 +32,6 @@ function M.setup()
 
 		TelescopeBorder = { fg = colors.red },
 	}
-	M.terminal_colors = {
-
-		color0 = "#000000",
-		color1 = "#7A1E1E",
-		color2 = "#a83d3d",
-		color3 = "#D14747",
-		color4 = "#DE7E7E",
-		color5 = "#E9A9A9",
-		color6 = "#F4D6F4",
-		color7 = "#FFFFFF",
-		color8 = "#202020",
-		color9 = "#909090",
-		color10 = "#505050",
-		color11 = "#989898",
-		color12 = "#BEBEBE",
-		color13 = "#DADADA",
-		color14 = "#FFFFFF",
-		color15 = "#FFFFFF",
-	}
 	vim.g.terminal_color_0 = "#000000"
 	vim.g.terminal_color_1 = "#7A1E1E"
 	vim.g.terminal_color_2 = "#a83d3d"
@@ -68,14 +49,6 @@ function M.setup()
 	vim.g.terminal_color_14 = "#FFFFFF"
 	vim.g.terminal_color_15 = "#FFFFFF"
 
-	for i = 0, 15 do
-		local color_key = "color" .. i
-		local color_val = M.terminal_colors[color_key]
-		if color_val then
-			-- Set the specific terminal highlight group
-			vim.api.nvim_set_hl(0, "TerminalColor" .. i, { fg = color_val, bg = "NONE" })
-		end
-	end
 	for group, opts in pairs(highlights) do
 		vim.api.nvim_set_hl(0, group, opts)
 	end
